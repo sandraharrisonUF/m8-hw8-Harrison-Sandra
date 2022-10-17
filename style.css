@@ -40,11 +40,29 @@ header a {
   font-size: 1.5rem;
   color: var(--off-white);
 }
+header a:hover {
+  animation: color-change 1s infinite;
+}
+@keyframes color-change {
+  0% {color: whitesmoke;}
+  50% { color: blue;}
+  100% {color: yellow;}
+}
 /* end header link animations */
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+}
+main a:hover {
+  background-color: red;
+  animation: color-change2 2s infinite;
+  text-transform: uppercase;
+}
+@keyframes color-change2 {
+  0% {color: rgb(161, 16, 16);}
+  50% { color: blue;}
+  100% {color: rgb(192, 255, 212);}
 }
 /* end article link transitions */
 
@@ -98,8 +116,17 @@ section.hero > button {
   border: none;
   padding: 12px 24px;
   border-radius: 12px;
-  text-transform: uppercase;
   cursor: pointer;
+  width: 300px;
+  font-weight: bolder;
+  font-size: large;
+  transition: 300ms;
+}
+
+button:hover {
+  transform: translateY(-15px) translateX(25px);
+  text-transform: uppercase;
+  color: red;
 }
 
 main article {
